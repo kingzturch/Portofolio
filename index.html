@@ -1,240 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyekyeku-tech.com</title>
-    <!-- Add Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/flaticon@latest/css/flaticon.css" rel="stylesheet">
-    <link rel="stylesheet" href="kye.css">
+    <!--========== Favicion ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!--========== remixicion ==========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--========== Css ==========-->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Portofolio Alfathur Robbani</title>
 </head>
+
 <body>
-    <header class="horizontal-header">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="https://telegra.ph/file/30c032ee516d51ceb456a.jpg" alt="Kyekyeku-Tech Logo">
-        </div>
-        
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search...">
-            <button class="search-btn" onclick="searchContent()"><i class="fas fa-search"></i></button>
-        </div>
-        <label style="color: rgb(1, 10, 10);">Choose your preferred color:
-            <input type="color" id="colorPicker">
-        </label>
-        
-        <button class="menu-toggle" aria-label="Menu Toggle">
-            <span class="icon"><i class="fas fa-bars"></i></span>
-        </button>
-        
-        <!-- Menu -->
-        <nav class="menu">
-            <ul>
-                <li><a href="tech.html" class="home"><span class="icon"><i class="fas fa-home"></i></span><span class="text">Home</span></a></li>
-                <li><a href="#" class="about"><span class="icon"><i class="fas fa-info-circle"></i></span><span class="text">About</span></a></li>
-                <li><a href="service.html" class="service"><span class="icon"><i class="fas fa-cogs"></i></span><span class="text">Service</span></a></li>
-                <li><a href="contact.html" class="contact"><span class="icon"><i class="fas fa-envelope"></i></span><span class="text">Contact</span></a></li>
-            </ul>
+    <!-- ========== Header ========== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Alfath</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#work" class="nav__link">Work</a>
+                    </li>
+                    <li>
+                        <a href="#info" class="nav__link">My Info</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <!--========== Close Button ==========-->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!-- ========== Toggle button ========== -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+
         </nav>
     </header>
 
+    <!-- ========== Main ==========-->
+    <main class="main">
 
-    <section>
-        <!-- Content -->
-        <h2>Welcome to My Portofolio</h2>
-        <h1>KYEKYEKU-TECH</h1>
-        <p>Transform your digital experience with Kyekyeku-tech.store App, your go-to destination for seamless and secure bundle packages. Call on 0545454000 for more info.</p>
-        <div class="bg-image-container">
-            <div class="bg-image" style="background-image: url('https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
-            <div class="text-overlay">
-                Experienced for Every Kinds of ITSolutions
-            </div>
-        </div>
-    </section>   
-</form>
-</div>
-<div class="feature col-lg-3 offset-lg-1 py-3 hide-on-scroll">
-<form action="#">
-<h5>OUR VISION</h5>
-<p>Empowering digital connectivity through seamless web experiences and accessible internet solutions.</p>
-</form>
-</div>
-<div class="feature col-lg-3 offset-lg-1 py-3 hide-on-scroll">
-<form action="#">
-<h5>OUR CORE VALUE</h5>
-<p>Excellence, Innovation,</p><p>Inclusivity, Integrity.</p>
-</form>
-</div>
- </div>
- <div class="feature col-lg-3 offset-lg-1 py-3" id="formContainer">
-    <form action="#">
-    <h5>OUR OUTCOME</h5>
-    <p>Revolutionizing online presence and connectivity,<p></p> one click at a time.</p>
-    </form>
-    </div>
-    <div class="feature col-lg-3 offset-lg-1 py-3 hide-on-scroll">
-        <form action="#">
-        <h5>OUR TEAM</h5>
-        <p>The ultimate programmers</p>
-        <a href="ourteam.html" class="btn">View the team</a>
-        </form>
-        </div>
-            <div class="row no-gutters d-flex align-items-stretch">
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-                    <div class="services-1">
-                        <div class="line"></div>
-                        <div class="icon"><span class="flaticon-bolt"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Information Technology Consultancy</h3>
-                            <a href="play.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-                    <div class="services-1 color-1">
-                        <div class="line"></div>
-                        <div class="icon"><span class="flaticon-light-bulb"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Product Design Strategy</h3>
-                            <a href="index.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-                    <div class="services-1 color-2">
-                        <div class="line"></div>
-                        <div class="icon"><span class="flaticon-cyber"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Web Development</h3>
-                            <a href="play.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section>
-                <section class="d-flex">
-    <!-- Image -->
-    <div class="col-md-6 p-3 pl-md-5 py-5 bg-primary">
-        <img src="https://th.bing.com/th/id/R.edd6c6c708934747a9f83e503845c6ec?rik=OU6Sdpw9h%2f0hew&riu=http%3a%2f%2flogivoire.com%2fwp-content%2fuploads%2f2019%2f02%2ffoto-slider-case-cons.jpg&ehk=3HBKGSSF%2bpsOv3%2fdMmYrCPlDZND304BiCgjzNevBgew%3d&ris" class="img-fluid" alt="Consultation Image">
-    </div>
-    <!-- Text Content -->
-    <div class="col-md-6 p-3 pl-md-5 py-5 bg-primary d-flex align-items-center justify-content-center flex-column flip-in-x" id="text-content">
-        <!-- Text Content -->
-        <div class="row justify-content-start pb-3">
-            <div class="col-md-12 heading-section heading-section-white ftco-animate fadeInUp ftco-animated text-center">
-                <h2 class="mb-4">Consult us here in <span>ITSolution</span></h2>
-                <p class="fas fa-laptop">Kyekyeku-Tech from Ghana</p>
-                
-                    <div class="feature">
-                        <i class="fas fa-handshake"></i>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-6 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
-                <div class="block-18 mb-4">
-                    <div class="text">
-                        <strong class="number" data-number="10">10</strong>
-                        
-<span>Project Complete</span>
-</div>
-</div>
-</div>
-<div class="col-md-6 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
-<div class="block-18 mb-4">
-<div class="text">
-<strong class="number" data-number="568">18</strong>
-<span>Happy Clients</span>
-</div>
-</div>
-</div>
-<div class="col-md-6 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
-<div class="block-18 mb-4">
-<div class="text">
-<strong class="number" data-number="478">2</strong>
-<span>Business Partners</span>
-</div>
-</div>
-</div>
-<div class="col-md-6 justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
-<div class="block-18 mb-4">
-<div class="text">
-<strong class="number" data-number="780">7</strong>
-<span>IT Consultant</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-    
-</section>
+        <!-- ========== Home ========== -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <img src="gambar/alfath.png" alt="Alfathur Robbani" class="home__img">
 
+                <div class="home__data">
+                    <h1 class="home__name">Alfathur <br> Robbani</h1>
+                    <h3 class="home__profession">Web Developer & Designer</h3>
+                    <p class="home__description">Mahasiswa Sistem Informasi di UPN "Veteran" Jawa Timur dengan minat dan keahlian dalam mendesain serta mengembangkan website yang fungsional dan menarik.</p>
+                </div>
+
+                <a href="#work" class="home__scroll">
+
+                    <div class="home__scroll-box">
+                        <i class="ri-arrow-down-line"></i>
+                    </div>
+
+                    <span class="home__scroll-text">Lihat Karya Terbaru</span>
+                </a>
+            </div>
         </section>
-        
-    <section class="features">
-        <!-- Features -->
-        <h2>Features</h2>
-        <div class="feature">
-            <i class="fas fa-laptop"></i>
-            <h3>Responsive Design</h3>
-            <p>Your website will look great on all devices.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-cogs"></i>
-            <h3>Customizable</h3>
-            <p>Easy to customize according to your needs.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-handshake"></i>
-            <h3>Support</h3>
-            <p>We provide excellent customer support.</p>
-        </div>
-        <div class="col-lg-3 py-3">
-           
-            <form action="">
-                <h4>Subscribe</h4>
-              <input type="email" class="form-control" placeholder="Enter your mail..">
-            </form>
-            <div class="social-icons">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <!-- ========== Work ========== -->
+        <section class="work section" id="work">
+            <h2 class="section__title">Karya Terbaru</h2>
+
+            <div class="work__container container grid">
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <h2 class="work__title">Website Rumah Sakit</h2>
+                        <p class="work__description">Website informasi dan layanan online untuk rumah sakit modern.</p>
+                        <img src="gambar/rumahsakit.jpg" alt="Website Rumah Sakit" class="work__img">
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <h2 class="work__title">Portfolio Designer</h2>
+                        <p class="work__description">Portofolio interaktif untuk menunjukkan karya-karya desain.</p>
+                        <img src="gambar/portfolio.jpg" alt="Portfolio Designer" class="work__img">
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
+                <article class="work__card">
+                    <a href="#" target="_blank" class="work__link">
+                        <h2 class="work__title">E-commerce Store</h2>
+                        <p class="work__description">Toko online dengan fitur lengkap dan desain responsif.</p>
+                        <img src="gambar/ecommerce.jpg" alt="E-commerce Store" class="work__img">
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
             </div>
-            
-    </section>
-    <div class="slideshow-container">
-        <!-- Slides -->
-        <div class="mySlides" style="background-image: url('https://telegra.ph/file/ddf9087dae1e826d8b986.jpg')">
-          <div class="quote-container">"WIN IN YOUR MIND AND YOU'LL WIN YOUR REALITY"<p>Kyekyeku-Tech</p></div>
+        </section>
+        <!-- ========== Info ========== -->
+        <section class="info section" id="info">
+            <h2 class="section__title">Informasi Saya</h2>
+            <div class="info__container container grid">
+                <!-- About -->
+                <div class="about grid">
+                    <div class="about__container">
+                        <h3 class="info__title">Tentang Saya</h3>
+                        <p class="about__description">Saya Alfathur Robbani, seorang mahasiswa Sistem Informasi di UPN "Veteran" Jawa Timur. Saya memiliki minat yang besar dalam dunia pengembangan web dan desain, serta berpengalaman dalam berbagai proyek yang melibatkan pembuatan website responsif dan user-friendly.</p>
+                        <a href="cv/cv.pdf" download="" target="_blank" class="button about__button">Download CV</a>
+                    </div>
+                    <img src="gambar/alfath.png" alt="Alfathur Robbani" class="about__img">
+                </div>
+
+                <!-- Experience -->
+                <div class="experience">
+                    <h3 class="info__title">Pengalaman</h3>
+                    <div class="experience__content grid">
+                        <div class="experience__data grid">
+                            <h2 class="experience__company">Discord</h2>
+                            <div>
+                                <h3 class="experience__profession">Web Product Management</h3>
+                                <span class="experience__date">05/23 - Sekarang</span>
+                                <p class="experience__description">Bertanggung jawab atas manajemen produk web, termasuk perencanaan, pengembangan, dan peluncuran fitur baru.</p>
+                            </div>
+                        </div>
+                        <div class="experience__data grid">
+                            <h2 class="experience__company">Google</h2>
+                            <div>
+                                <h3 class="experience__profession">Web Developer</h3>
+                                <span class="experience__date">05/23 - Sekarang</span>
+                                <p class="experience__description">Mengembangkan dan memelihara berbagai proyek web dengan fokus pada performa dan pengalaman pengguna.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="skills">
+                    <h3 class="info__title">Keahlian</h3>
+                    <div class="skills__content grid">
+                        <div class="skills__box">
+                            <img src="gambar/html.png" alt="HTML" class="skills__img">
+                            <span class="skills__name">HTML</span>
+                        </div>
+                        <div class="skills__box">
+                            <img src="gambar/css.png" alt="CSS" class="skills__img">
+                            <span class="skills__name">CSS</span>
+                        </div>
+                        <div class="skills__box">
+                            <img src="gambar/js.png" alt="JavaScript" class="skills__img">
+                            <span class="skills__name">JavaScript</span>
+                        </div>
+                        <div class="skills__box">
+                            <img src="gambar/react.png" alt="React" class="skills__img">
+                            <span class="skills__name">React</span>
+                        </div>
+                        <div class="skills__box">
+                            <img src="gambar/nodejs.png" alt="Node.js" class="skills__img">
+                            <span class="skills__name">Node.js</span>
+                        </div>
+                        <div class="skills__box">
+                            <img src="gambar/figma.png" alt="Figma" class="skills__img">
+                            <span class="skills__name">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Services ========== -->
+        <section class="services section" id="services">
+            <h2 class="section__title">Layanan</h2>
+
+            <div class="services__container container grid">
+                <article class="services__card">
+                    <i class="ri-code-box-line services__icon"></i>
+                    <h3 class="services__title">Pengembangan Web</h3>
+                    <p class="services__description">Pengembangan website kustom yang responsif dan fungsional sesuai kebutuhan klien.</p>
+                </article>
+                <article class="services__card">
+                    <i class="ri-pencil-ruler-2-line services__icon"></i>
+                    <h3 class="services__title">Desain UI/UX</h3>
+                    <p class="services__description">Desain antarmuka yang menarik dan pengalaman pengguna yang intuitif untuk aplikasi web dan mobile.</p>
+                </article>
+                <article class="services__card">
+                    <i class="ri-seo-line services__icon"></i>
+                    <h3 class="services__title">Optimisasi SEO</h3>
+                    <p class="services__description">Meningkatkan visibilitas website di mesin pencari melalui teknik optimisasi SEO yang efektif.</p>
+                </article>
+                <article class="services__card">
+                    <i class="ri-layout-2-line services__icon"></i>
+                    <h3 class="services__title">Desain Grafis</h3>
+                    <p class="services__description">Pembuatan desain grafis yang kreatif untuk berbagai kebutuhan pemasaran dan branding.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== Contact ========== -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Hubungi Saya</h2>
+
+            <div class="contact__container container grid">
+                <form action="" class="contact__form grid" id="contact-form">
+                    <div class="contact__group grid">
+                        <input type="text" name="user_name" placeholder="Nama" required class="contact__input">
+                        <input type="email" name="user_email" placeholder="Email" required class="contact__input">
+                    </div>
+
+                    <textarea name="user_message" placeholder="Pesan" required
+                        class="contact__input contact__area"></textarea>
+                    <button type="submit" class="button contact__button">Kirim Pesan</button>
+                    <p class="contact__message" id="contact-message">Pastikan Anda menulis pesan dengan benar</p>
+                </form>
+                <div class="contact__social grid">
+                    <a href="https://www.facebook.com/fathur.rabbani.106?mibextid=ZbWKwL" target="_blank"
+                        class="contact__social-link">
+                        <i class="ri-facebook-circle-line"></i>
+                        <span>Facebook</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/king_turch?utm_source=qr" target="_blank"
+                        class="contact__social-link">
+                        <i class="ri-instagram-line"></i>
+                        <span>Instagram</span>
+                    </a>
+
+                    <a href="http://www.linkedin.com/in/alfathur-robbani-a3220927a" target="_blank"
+                        class="contact__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/username" target="_blank" class="contact__social-link">
+                        <i class="ri-github-fill"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- ========== Footer ==========-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <span class="footer__copy">
+                &#169; Hak Cipta oleh Alfathur Robbani. Semua hak dilindungi.
+            </span>
         </div>
-        <div class="mySlides" style="background-image: url('https://telegra.ph/file/e90abe7804cc8ddb443b7.jpg')">
-          <div class="quote-container">"IF YOU KEEP POSTPONING WHAT YOU CAN DO TODAY, TOMORROW BECOMES A SCARY PLACE."<p>Kyekyeku-Tech</p></p></div>
-        </div>
-        <div class="mySlides" style="background-image: url('https://telegra.ph/file/c60e2d545ef8c1293b0c5.jpg')">
-          <div class="quote-container">"IT IS WHAT IT IS. ACCEPT IT AND MOVE ON"<p>Kyekyeku-Tech</p></div>
-        </div>
-      </div>
-    <footer>
-        <p>
-        Copyright © All rights reserved | This website is made <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://wa.me/+233545454000" target="_blank">Kyekyeku-Tech</a>
-    </p>
-    <div class="ct-icon1 style2">
-        <a href="https://facebook.com/oppong.safo.35">
-<i aria-hidden="true" class="fab fa-facebook-f"></i>                                    </a>
-                    <a href="https://twitter.com/safo_oppong">
-<i aria-hidden="true" class="fab fa-twitter"></i>                                    </a>
-                    <a href="https://github.com/kyekyeku">
-<i aria-hidden="true" class="fab fa-github"></i>                                    </a>
-                    <a href="https://wa.me/+233545454000">
-<i aria-hidden="true" class="fab fa-whatsapp"></i>                                    </a>
-</div>
     </footer>
-        <script src="kye.js"></script>
-    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ========== Scroll Up ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <!-- ========== Scroll Reveal ==========-->
+    <script src="scrollreveal.js"></script>
+    <!-- ========== EmailJS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- ========== Main JS ========== -->
+    <script src="main.js"></script>
+</body>
+
 </html>
