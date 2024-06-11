@@ -58,7 +58,7 @@
  }
 
 html {
-    scroll-bahavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -380,7 +380,7 @@ row-gap: 3rem;
 
 /* ========== INFONE MAZZEH ========== */
 .info__container{
-    row-grap: 3rem;
+    row-gap: 3rem;
 }
 
 .info__title{
@@ -402,7 +402,7 @@ row-gap: 3rem;
 }
 /* ========== about ========== */
 .about{
-    row-grap: 3rem;
+    row-gap: 3rem;
 }
 
 .about__description{
