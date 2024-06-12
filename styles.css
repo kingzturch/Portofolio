@@ -258,6 +258,10 @@ row-gap: 3rem;
   margin-bottom: 1rem;  
 }
 
+.home__description {
+    color: aliceblue;
+}
+
 .home__profession{
     position: relative;
     font-size: var(--big-font-size);
@@ -407,6 +411,7 @@ row-gap: 3rem;
 
 .about__description{
     margin-bottom: 2rem;
+    color: aliceblue;
 }
 
 .about__description b{
@@ -431,6 +436,10 @@ row-gap: 3rem;
 
 .experience__date{
     row-gap: 1ram;
+    color: aliceblue;
+}
+.experience__description{
+    color: aliceblue;
 }
 
 .experience__company{
@@ -457,6 +466,7 @@ row-gap: 3rem;
 
 .skills__name{
     font-size: var(--small-font-size);
+    color: aliceblue;
 }
 
 .skills__content{
@@ -494,6 +504,9 @@ transition: tranform .4s;
 .services__title{
     font-size: var(--h3-font-size);
     margin-bottom: .75rem;
+}
+.services__description{
+    color: aliceblue;
 }
 
 /* ==========Contact========== */
