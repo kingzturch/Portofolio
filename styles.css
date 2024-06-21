@@ -246,10 +246,10 @@ row-gap: 3rem;
 
 .home__img{
     width: 300%; /* Atau gunakan nilai persentase untuk responsif */
-    max-width: 500px; /* Batas maksimal lebar gambar */
+    max-width: 400px; /* Batas maksimal lebar gambar */
     justify-self: center;
     mask-image: linear-gradient(to bottom,
-    hsla(var(--hue), 40%, 16%) 60%,transparent 80%);
+    hsla(var(--hue), 40%, 16%) 5%,transparent 100%);
 
 }
 .home__name{
