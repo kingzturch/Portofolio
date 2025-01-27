@@ -365,8 +365,14 @@
  }
 
  .work__card {
-     background-color: var(--first-color);
- }
+    overflow: hidden; /* Mencegah kontainer memotong isi */
+    display: flex;
+    flex-direction: column; /* Elemen vertikal */
+    align-items: center; /* Konten rata tengah */
+    gap: 1rem; /* Jarak antar elemen */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek */
+}
 
  .work__link {
      display: block;
@@ -424,6 +430,13 @@
 .work__tool:hover {
     background-color: #ddd;
     cursor: pointer;
+}
+.work__img {
+    display: block;
+    width: 100%; /* Gambar memenuhi lebar kontainer */
+    height: auto; /* Menjaga aspek rasio gambar */
+    object-fit: contain; /* Jangan memotong gambar, sesuaikan dengan kontainer */
+    border-radius: 10px; /* Sudut melengkung untuk estetika */
 }
 
 
@@ -732,19 +745,62 @@
      .skills__content {
          grid-template-columns: repeat(2, max-content);
      }
+    
  }
+ /* Perbaikan untuk Media Query */
+@media screen and (max-width: 480px) {
+    .work__container {
+        grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+        padding: 1rem; /* Ruang ekstra di sekitar */
+        gap: 1rem; /* Jarak antar kartu */
+    }
+
+    .work__link {
+        padding: 1rem; /* Kurangi padding untuk layar kecil */
+    }
+
+    .work__img {
+        width: 100%; /* Gambar menyesuaikan kontainer */
+        height: auto; /* Menjaga proporsi gambar */
+        object-fit: contain; /* Jangan memotong gambar */
+    }
+
+    .work__tools {
+        flex-wrap: wrap; /* Tools turun ke baris baru jika sempit */
+        gap: 5px; /* Kurangi jarak antar tools */
+        justify-content: center;
+    }
+
+    .work__tool {
+        padding: 5px 10px; /* Ukuran lebih kecil */
+        font-size: 12px; /* Ukuran font lebih kecil */
+        margin: 2px 0; /* Tambahkan sedikit margin antar tools */
+    }
+}
+
 
  /* medium */
  @media screen and (min-width: 540px) {
 
      .home__container,
-     .work__container,
      .info__container,
      .services__container,
      .contact__container {
          grid-template-columns: 350px;
          justify-content: center;
      }
+     .work__container {
+        grid-template-columns: 1fr; /* Tata letak tetap satu kolom */
+        gap: 1rem; /* Kurangi jarak antar kartu */
+    }
+
+    .work__link {
+        padding: 1rem; /* Kurangi padding lebih jauh */
+    }
+
+    .work__title {
+        font-size: calc(var(--h3-font-size) - 0.5rem); /* Sesuaikan ukuran font */
+    }
  }
 
  @media screen and (min-width: 768px) {
@@ -767,8 +823,31 @@
      }
 
      .work__container {
-         grid-template-columns: repeat(2, 350px);
-     }
+        grid-template-columns: 1fr; /* Tata letak satu kolom untuk layar kecil */
+        gap: 1.5rem; /* Jarak antar kartu di layar kecil */
+    }
+
+    .work__link {
+        padding: 1.5rem 1rem; /* Kurangi padding di layar kecil */
+    }
+
+    .work__title {
+        font-size: calc(var(--h3-font-size) - 0.3rem); /* Kurangi ukuran font */
+    }
+
+    .work__tools {
+        gap: 10px; /* Kurangi jarak antar elemen tools */
+    }
+
+    .work__tool {
+        flex: initial; /* Biarkan tools mengatur ukuran otomatis */
+        padding: 5px 10px; /* Kurangi padding */
+    }
+    .work__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
      .info__container {
          grid-template-columns: initial;
@@ -797,11 +876,27 @@
      .services__container {
          grid-template-columns: repeat(2, 320px);
      }
-
-
-
+     
 
  }
+ @media screen and (min-width: 769px) {
+    .work__container {
+        grid-template-columns: repeat(2, 540px); /* Dua kolom besar */
+        gap: 2rem; /* Jarak antar elemen */
+    }
+
+    .work__link {
+        padding: 3rem; /* Padding lebih luas */
+    }
+
+    .work__img {
+        object-fit: cover; /* Untuk layar besar, gambar terlihat penuh */
+    }
+
+    .work__tools {
+        gap: 15px;
+    }
+}
 
  /* gede */
  @media screen and (min-width: 1150px) {
@@ -854,22 +949,22 @@
      }
 
      .work__container {
-         grid-template-columns: repeat(2, 540px);
-         gap: 2.5rem;
-     }
+        grid-template-columns: repeat(2, 540px); /* Dua kolom di layar besar */
+        gap: 2.5rem; /* Jarak antar kartu */
+    }
 
-     .work__link {
-         padding: 3rem 3rem 2rem;
-     }
+    .work__link {
+        padding: 3rem 3rem 2rem; /* Padding lebih besar */
+    }
 
-     .work__title {
-         font-size: var(--h2-font-size);
-         margin-bottom: 1rem;
-     }
+    .work__title {
+        font-size: var(--h2-font-size); /* Ukuran font besar */
+        margin-bottom: 1rem;
+    }
 
-     .work__link i {
-         font-size: 2rem;
-     }
+    .work__link i {
+        font-size: 2rem; /* Ikon lebih besar */
+    }
 
      .info__container {
          row-gap: 4rem;
