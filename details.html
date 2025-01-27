@@ -8,6 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+    </div>
     <section class="details section">
         <div class="details__container container">
            
@@ -23,6 +26,18 @@
     </section>
 
     <script>
+          // Menunggu 2 detik untuk menghilangkan loading screen
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block'; // Menampilkan konten utama setelah loading selesai
+        }, 2000);  // Durasi loading 2 detik
+        
+        document.addEventListener('DOMContentLoaded', () => {
+        const detailsSection = document.querySelector('.details');
+        detailsSection.style.opacity = '1';
+        detailsSection.style.transform = 'translateY(0)';
+        });
+
         // Ambil data dari query string URL
         const urlParams = new URLSearchParams(window.location.search);
         const tools = urlParams.get('tools').split(','); // Memisahkan daftar tools
