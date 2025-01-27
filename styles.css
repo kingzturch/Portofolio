@@ -402,6 +402,31 @@
  .work__link:hover i {
      transform: translateX(.5rem);
  }
+ .work__tools {
+    display: flex; /* Mengatur agar kotak bersebelahan */
+    gap: 10px; /* Menambahkan jarak antara kotak */
+    margin-top: 10px;
+}
+
+.work__tool {
+    background-color: #f0f0f0;
+    padding: 8px 15px; /* Sesuaikan padding untuk kotak yang lebih jelas */
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    flex: 1; /* Membuat kotak-kotak mengisi ruang secara proporsional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work__tool:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+
 
  /* ========== INFONE MAZZEH ========== */
  .info__container {
@@ -536,6 +561,32 @@
  .services__description {
      color: aliceblue;
  }
+ .services__label {
+    font-size: 18px; /* Ukuran font lebih besar untuk label */
+    font-weight: bold; /* Membuat teks label lebih tebal */
+    display: block; /* Memastikan label berada dalam baris sendiri */
+    margin-bottom: 5px; /* Memberi jarak di bawah label */
+    color: #fff; /* Warna teks label putih */
+    position: relative;
+}
+
+.services__label::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Ketebalan garis */
+    background-color: #fff; /* Warna garis putih */
+    margin-top: 5px;
+}
+
+.services__text {
+    font-size: 16px; /* Ukuran font teks deskripsi */
+    color: #ccc; /* Warna teks deskripsi */
+    display: block; /* Teks berada di baris baru */
+    margin-top: 5px; /* Memberi sedikit jarak antara label dan teks */
+}
+
+
 
  /* ==========Contact========== */
  .contact__container {
