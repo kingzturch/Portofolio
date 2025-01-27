@@ -1,0 +1,171 @@
+/* Reset dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling section */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.details__container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.details__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Tools container */
+.details__tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Tool box */
+.details__tool {
+    background-color: #f0f0f0;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #555;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+/* Efek hover */
+.details__tool:hover {
+    background-color: #ddd;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link styling */
+.details__tool a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover pada link */
+.details__tool a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+.back-btn {
+    display: inline-block; width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(10, 96, 154);
+    color: #fff;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.back-btn i {
+    margin-right: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .back-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Responsiveness */
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .details__container {
+        padding: 3rem;
+        max-width: 90%;
+    }
+    
+    .details__title {
+        font-size: 1.8rem;
+    }
+
+    .details__tool {
+        padding: 15px 30px;
+        font-size: 1.8rem;
+        min-width: 180px;
+        flex-grow: 1; /* Membuat elemen dapat berkembang di dalam kontainer */
+    }
+
+    .details__tool a {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .details__container {
+        padding: 1.5rem; /* Mengurangi padding agar lebih efisien */
+        max-width: 95%;
+        width: 100%;
+    }
+
+    .details__title {
+        font-size: 1.4rem;
+    }
+
+    .details__tools {
+        flex-direction: column; /* Menjadikan elemen dalam satu kolom */
+        gap: 1rem;
+        justify-content: center;
+        align-items: center; /* Memastikan elemen tersusun rapi secara vertikal */
+    }
+
+    .details__tool {
+        padding: 12px 15px; /* Menyesuaikan padding agar tidak terlalu besar */
+        font-size: 1.4rem;
+        min-width: 90%; /* Memastikan tool memanfaatkan seluruh lebar */
+        text-align: center; /* Menjaga teks tetap terpusat */
+    }
+
+    .details__tool a {
+        font-size: 1.2rem;
+    }
+}

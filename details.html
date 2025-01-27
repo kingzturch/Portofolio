@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="details.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <section class="details section">
+        <div class="details__container container">
+           
+            <h1 class="details__title">TERSEDIA</h1>
+            <div class="details__tools" id="tools-container">
+                <!-- Kotak tools akan di-generate di sini -->
+            </div>
+            <p></p>
+            <a href="index.html" class="back-btn" id="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Ambil data dari query string URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tools = urlParams.get('tools').split(','); // Memisahkan daftar tools
+
+        // Ambil URL untuk masing-masing kategori
+        const figmaUrl = urlParams.get('figma_url');
+        const webUrl = urlParams.get('web_url');
+        const githubUrl = urlParams.get('github_url');
+        const pdfUrl = urlParams.get('pdf_url');
+
+        // Ambil container untuk menampilkan kotak tools
+        const toolsContainer = document.getElementById('tools-container');
+
+        // Fungsi untuk menambahkan ikon sesuai kategori tool
+        const getToolIcon = (tool) => {
+            if (tool === 'Figma') {
+                return '<i class="fa-brands fa-figma"></i>';
+            } else if (tool === 'WEB') {
+                return '<i class="fa-solid fa-globe"></i>';
+            } else if (tool === 'GitHub') {
+                return '<i class="fa-brands fa-github"></i>';
+            } else if (tool === 'Laporan') {
+                return '<i class="fa-solid fa-file-pdf"></i>';
+            }
+            return '';
+        };
+
+        // Generate kotak tools berdasarkan jumlah tools
+        tools.forEach(tool => {
+            const toolBox = document.createElement('div');
+            toolBox.className = 'details__tool';
+
+            let toolLink = '';
+            if (tool === 'Figma') {
+                toolLink = figmaUrl;
+            } else if (tool === 'WEB') {
+                toolLink = webUrl;
+            } else if (tool === 'GitHub') {
+                toolLink = githubUrl;
+            } else if (tool === 'Laporan') {
+                toolLink = pdfUrl;
+            }
+
+            toolBox.innerHTML = `
+                <a href="${toolLink}" target="_blank">
+                    ${getToolIcon(tool)}
+                    <p>${tool}</p>
+                </a>
+            `;
+
+            toolsContainer.appendChild(toolBox);
+        });
+
+    </script>
+</body>
+</html>
