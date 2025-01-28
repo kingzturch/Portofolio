@@ -98,7 +98,14 @@ window.addEventListener('resize', () => {
 
 function initParticles() {
     particlesArray.length = 0;
-    const numParticles = 80;
+
+    // Determine the number of particles dynamically based on screen width
+    let numParticles;
+    if (canvas.width <= 1080) { // Approximate screen width of Realme C55
+        numParticles = 30;
+    } else {
+        numParticles = 80; // Default for larger screens
+    }
 
     for (let i = 0; i < numParticles; i++) {
         const size = Math.random() * 5 + 1;
@@ -124,6 +131,7 @@ function animateParticles() {
 
 initParticles();
 animateParticles();
+
 
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
