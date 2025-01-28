@@ -17,6 +17,114 @@ if(navClose){
     })
 }
 
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particlesArray = [];
+
+class Particle {
+    constructor(x, y, size, color, velocityX, velocityY) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.color = color;
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
+        this.opacity = 0; // Start with invisible particles
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fill();
+    }
+
+    update(mouse) {
+        // Gradually increase opacity
+        if (this.opacity < 0.8) {
+            this.opacity += 0.01;
+        }
+
+        // Calculate distance from cursor
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // If the particle is within 150px of the cursor, move it away
+        if (distance < 150) {
+            const angle = Math.atan2(dy, dx); // Angle between particle and cursor
+            const force = (150 - distance) / 150; // Strength of the repulsion
+            const forceX = Math.cos(angle) * force * 5; // X direction
+            const forceY = Math.sin(angle) * force * 5; // Y direction
+
+            this.x -= forceX; // Move particle away in X direction
+            this.y -= forceY; // Move particle away in Y direction
+        }
+
+        // Update position
+        this.x += this.velocityX;
+        this.y += this.velocityY;
+
+        // Keep particles within canvas bounds
+        if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+            this.velocityX *= -1;
+        }
+        if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+            this.velocityY *= -1;
+        }
+
+        this.draw();
+    }
+}
+
+const mouse = {
+    x: null,
+    y: null
+};
+
+window.addEventListener('mousemove', (event) => {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
+});
+
+function initParticles() {
+    particlesArray.length = 0;
+    const numParticles = 75;
+
+    for (let i = 0; i < numParticles; i++) {
+        const size = Math.random() * 5 + 1;
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const color = 'rgba(255, 255, 255, 0.8)';
+        const velocityX = (Math.random() - 0.5) * 1;
+        const velocityY = (Math.random() - 0.5) * 1;
+
+        particlesArray.push(new Particle(x, y, size, color, velocityX, velocityY));
+    }
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particlesArray.forEach(particle => {
+        particle.update(mouse);
+    });
+
+    requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
