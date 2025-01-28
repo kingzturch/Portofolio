@@ -98,7 +98,7 @@ window.addEventListener('resize', () => {
 
 function initParticles() {
     particlesArray.length = 0;
-    const numParticles = 75;
+    const numParticles = 80;
 
     for (let i = 0; i < numParticles; i++) {
         const size = Math.random() * 5 + 1;
