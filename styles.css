@@ -267,7 +267,7 @@
  }
 
  .home__img {
-     width: 100%;
+     width: 115%;
      /* Atau gunakan nilai persentase untuk responsif */
      max-width: 400px;
      /* Batas maksimal lebar gambar */
