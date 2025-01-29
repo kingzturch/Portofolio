@@ -372,6 +372,13 @@
      background-color: var(--container-color);
  }
 
+ .work__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
  .work__card {
     overflow: hidden; /* Mencegah kontainer memotong isi */
     display: flex;
@@ -417,19 +424,19 @@
      transform: translateX(.5rem);
  }
  .work__tools {
-    display: flex; /* Mengatur agar kotak bersebelahan */
-    gap: 10px; /* Menambahkan jarak antara kotak */
-    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .work__tool {
     background-color: #f0f0f0;
-    padding: 8px 15px; /* Sesuaikan padding untuk kotak yang lebih jelas */
+    padding: 8px 15px;
     border-radius: 5px;
     font-size: 14px;
     color: #333;
     text-align: center;
-    flex: 1; /* Membuat kotak-kotak mengisi ruang secara proporsional */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -443,7 +450,7 @@
     display: block;
     width: 100%; /* Gambar memenuhi lebar kontainer */
     height: auto; /* Menjaga aspek rasio gambar */
-    object-fit: contain; /* Jangan memotong gambar, sesuaikan dengan kontainer */
+    object-fit: cover;
     border-radius: 10px; /* Sudut melengkung untuk estetika */
 }
 
