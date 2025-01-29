@@ -401,11 +401,9 @@
  .work__title {
      font-size: var(--h3-font-size);
      margin-bottom: .75rem;
+     
  }
 
- .work__description {
-     margin-bottom: 1.5rem;
- }
 
  .work__link i {
      position: absolute;
@@ -453,7 +451,20 @@
     object-fit: cover;
     border-radius: 10px; /* Sudut melengkung untuk estetika */
 }
+.work__description {
+    margin-bottom: 1.5rem;  
+}
 
+.work__detail {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
 
 
  /* ========== INFONE MAZZEH ========== */
